@@ -1,0 +1,90 @@
+.deck-display {
+  margin: 20px 0;
+}
+
+.deck-title {
+  text-align: center;
+  margin-bottom: 16px;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(13, 1fr);
+  gap: 8px;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.cards-grid.animating {
+  background: #f0f8ff;
+  box-shadow: 0 4px 16px rgba(0, 123, 255, 0.1);
+}
+
+/* Responsive grid adjustments */
+@media (max-width: 1200px) {
+  .cards-grid {
+    grid-template-columns: repeat(11, 1fr);
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .cards-grid {
+    grid-template-columns: repeat(10, 1fr);
+    max-width: 700px;
+  }
+}
+
+@media (max-width: 768px) {
+  .cards-grid {
+    grid-template-columns: repeat(8, 1fr);
+    gap: 6px;
+    padding: 16px;
+    max-width: 500px;
+  }
+  
+  .deck-title {
+    font-size: 16px;
+    margin-bottom: 12px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cards-grid {
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    padding: 14px;
+    max-width: 450px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cards-grid {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 4px;
+    padding: 12px;
+    max-width: 380px;
+  }
+  
+  .deck-title {
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 360px) {
+  .cards-grid {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 3px;
+    padding: 10px;
+    max-width: 320px;
+  }
+}
